@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Node (docx generator)
+node_modules/
+package-lock.json
+
+# Generated output
+outputs/
+hw3_results.xlsx
+~$*.docx
+
+# Streamlit
+.streamlit/secrets.toml
+
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/
+figs/

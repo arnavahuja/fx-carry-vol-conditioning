@@ -1,0 +1,7 @@
+# Already satisfied by the `backbone` conda env on this machine.
+pandas>=2.2
+numpy>=1.26
+scipy>=1.12
+plotly>=5.24
+streamlit>=1.45
+openpyxl>=3.1
