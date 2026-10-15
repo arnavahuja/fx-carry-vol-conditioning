@@ -9,7 +9,6 @@ realised volatility.
 ## Run it
 
 ```bash
-conda activate backbone
 streamlit run app.py        # or: ./run.sh
 ```
 
@@ -27,10 +26,6 @@ The `backbone` conda env already has every dependency. Otherwise:
 | `fx_carry/conditioning.py` | Volatility diagnostics (c) and the conditioning overlays (d, e) |
 | `fx_carry/historical.py` | Realised-volatility measures for (e), each with its motivation |
 | `fx_carry/viz.py` | Plotly figures |
-| `ANSWERS.md` | Drafted write-up for (a)–(e) with the formulas and the numbers |
-| `ANSWERS.docx` | The same write-up as a Word document |
-| `build_docx.py` | Rebuilds `ANSWERS.docx` from `ANSWERS.md` via pandoc |
-| `hw3.data.carry.FX.dly.xlsx` | The assignment data |
 
 ## Conventions
 
@@ -42,17 +37,3 @@ The `backbone` conda env already has every dependency. Otherwise:
 - Every portfolio is dollar-neutral, gross exposure 2, rebalanced daily, costless.
 - Conditioning thresholds are rolling quantiles of each series' own past, never
   full-sample numbers.
-
-## Rebuilding the Word document
-
-```bash
-python build_docx.py
-```
-
-Edit `ANSWERS.md`, re-run, and `ANSWERS.docx` is regenerated. The script
-transposes the twelve-portfolio table and splits it in two so it fits a
-portrait US Letter page, and converts the LaTeX to native Word equations.
-
-Every number in `ANSWERS.md` comes from the app's default settings. Change the
-day count, the sample window or the conditioning rule in the sidebar and the
-app — including its summary table — recomputes.
